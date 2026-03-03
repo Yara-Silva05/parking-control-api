@@ -22,7 +22,7 @@ public class RoleModel implements GrantedAuthority, Serializable {
     private RoleName roleName;
 
     @ManyToMany
-    @JoinTable(name = "TB_USER_ROLES",
+    @JoinTable(name = "TB_USERS_ROLES",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private List<RoleModel> roles;
